@@ -11,9 +11,9 @@
   box-shadow: 0 math.div($base-size, 4) 0 rgba(0, 0, 0, 0.3);
   color: $color-dark;
 
-  &:last-child {
-    margin: 0 0 $base-size 0;
-  }
+  // &:last-child {
+    // margin: 0 0 $base-size 0;
+  // }
 }
 
 .title {
