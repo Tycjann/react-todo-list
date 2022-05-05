@@ -1,4 +1,11 @@
 const initialState = {
+
+  search: [
+    {
+      text: '',
+    }
+  ],
+
   columns: [
     {
       id: 1,
