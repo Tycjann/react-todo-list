@@ -1,0 +1,43 @@
+@import '../../styles/settings.scss';
+
+.navbar {
+  background-color: darken($color-dark, 3%);
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+
+  .navbar__link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar__brand {
+      color: $color-light;
+      font-size: ($base-size * 2);
+    }
+
+    .navbar__navigation {
+      list-style-type: none;
+      font-size: ($base-size * 1.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: flex;
+      margin: 0;
+
+      .navbar__navigation_li {
+        margin-right: 15px;
+        a {
+          color: $color-light;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
