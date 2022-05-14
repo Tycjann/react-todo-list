@@ -1,0 +1,18 @@
+@import '../../styles/settings.scss';
+
+.listForm {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .listForm {
+    flex-direction: column;
+  }
+}

@@ -1,11 +1,16 @@
 import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateSearchText } from '../../redux/store.js';
+// import { useSelector } from 'react-redux';
 
 const SearchForm = () => {
+
+  // show search text in input search
+  // const searchTextMemory = useSelector(getSearchText).text;
+  // const [searchText, setSearchText] = useState(searchTextMemory || '');
 
   const [searchText, setSearchText] = useState('');
 
@@ -13,14 +18,13 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // dispatch({ 
-    //   type: 'UPDATE_SEARCH_TEXT',
-    //   payload: { text: searchText }
-    // });
-
-    // console.log('Submit', searchText);
-    dispatch(updateSearchText({text: searchText}));
+    dispatch(updateSearchText({ text: searchText }));
   };
+
+  // Clear search text
+  useEffect(() => {
+      dispatch(updateSearchText({ text: '' }));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit}>
