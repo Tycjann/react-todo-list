@@ -12,7 +12,17 @@
   font-weight: bold;
 }
 
-span {
-  color: $color-star;
-  cursor: pointer;
+.icons {
+  display: flex;
+  
+  .trash {
+    color: $color-grey;
+    padding-left: $base-size;
+    cursor: pointer;
+  }
+
+  .star {
+    color: $color-star;
+    cursor: pointer;
+  }
 }
